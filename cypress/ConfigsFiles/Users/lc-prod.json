@@ -1,0 +1,9 @@
+{ 
+        "testFiles": "**/Features/Users/*.feature",
+        "baseUrl":"http://www.lecollectionist.com",
+        "defaultCommandTimeout": 10000,
+        "viewportWidth": 1500,
+        "viewportHeight": 1200,
+        "env" :{ 
+        }
+}

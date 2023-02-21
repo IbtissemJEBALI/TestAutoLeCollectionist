@@ -1,0 +1,7 @@
+node_modules/
+.vscode/
+cucumber-json/
+reports
+cypress/screenshots/
+cypress/videos/
+.DS_Store
