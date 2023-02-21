@@ -7,14 +7,14 @@ This projet allow to test the leCollectionnist platform web
 ### Configuration and prerequisites ###
 
  # Cypress #
-#How to use project
+How to use project
 
 # Step1
 
 Install Node.js
 Link to install node.js : https://nodejs.org/en/download/
 
-How to verify if node and npm are 
+How to verify if node and npm are installed
 
     - npm --version
     - node --version 
@@ -28,7 +28,7 @@ Link to install isual Studio Code : https://code.visualstudio.com/download
 
 Clone repository form in your local workspace 
 
-    - git clone https://github.com/Jebali02/LeCollectionnistTestCypress.git
+    - git clone https://github.com/IbtissemJEBALI/TestAutoLeCollectionist
 
 # Step4
 
@@ -40,36 +40,37 @@ Open VS Code terminal and run this commands  :
 
     - npm init : uniquement pour un nouveau projet from scratch 
     - npm install : uniquement à faire pour un nouvau projet from scratch
-    
     - npm install --save-dev cypress@8.7.0 : Cypress version used : 8.7.0
     - npx cypress open : ouvir cypress pour finaliser l'installation
-
     - npm install --save-dev cypress-cucumber-preprocessor 
-
     - npm install -D cypress-xpath
-
     - npm i -D cypress-recurse
-
     - npm install multiple-cucumber-html-reporter --save-dev 
 
 # Step6 : How to run tests ?
 
-Run this command using the terminal under the project workspace 
+Opening cypress without configuration : 
 
-    - npx cypress run --spec cypress/integration/Features/*/*.feature --browser chrome
+    - npx cypress open 
 
-This command will run all features available under the folder /integration/Features
+Opening cypress with configuration : 
+
+    - Staging LC : npx cypress open --config-file Cypress/ConfigsFiles/Users/lc-staging.json
+    - Staging AT : npx cypress open --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json
+    - Prod LC : npx cypress open --config-file Cypress/ConfigsFiles/Users/lc-prod.json
+    - Prod AT : npx cypress open --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
+
+Launching Cypress without opening it :
+
+    - Staging LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-staging.json
+    - Staging AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json
+    - Prod LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-prod.json
+    - Prod AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
+
+
 
 # Step7 : How generate report : Cucumber Report 
 
-Under the workspace run this command  : 
+Run this command using the terminal under the project workspace : 
 
     - node .\cucumber-html-report.js
-
-Cumcumber Report exemple :
-
-![Feature1](https://user-images.githubusercontent.com/116507752/207738272-0c65e678-992f-4e2d-8b79-c04765f3674d.PNG)
-
-![Feature2](https://user-images.githubusercontent.com/116507752/207738285-e266faae-2c35-40bc-9d81-8d4077c2e108.PNG)
-
-![feature3](https://user-images.githubusercontent.com/116507752/207738293-04cb3624-c77c-4c6d-9410-0f35b1f4bbdb.PNG)
