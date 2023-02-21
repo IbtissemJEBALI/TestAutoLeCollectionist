@@ -57,6 +57,7 @@ Opening cypress with configuration :
 
     - Staging LC : npx cypress open --config-file Cypress/ConfigsFiles/Users/lc-staging.json
     - Staging AT : npx cypress open --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json
+
     - Prod LC : npx cypress open --config-file Cypress/ConfigsFiles/Users/lc-prod.json
     - Prod AT : npx cypress open --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
 
@@ -64,6 +65,7 @@ Launching Cypress without opening it :
 
     - Staging LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-staging.json
     - Staging AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json
+    
     - Prod LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-prod.json
     - Prod AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
 
