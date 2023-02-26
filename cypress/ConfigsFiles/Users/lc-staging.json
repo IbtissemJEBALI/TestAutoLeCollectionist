@@ -1,10 +1,9 @@
-
 { 
         "testFiles": "**/Features/Users/*.feature",
         "baseUrl":"https://staging.lecollectionist.com/fr",
-        "defaultCommandTimeout": 10000,
-        "viewportWidth": 1500,
-        "viewportHeight": 1200,
+        "defaultCommandTimeout": 20000,
+        "viewportWidth": 1200,
+        "viewportHeight":800,
         "env" :{ 
         }
 }

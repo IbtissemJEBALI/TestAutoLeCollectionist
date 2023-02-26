@@ -1,5 +1,5 @@
 import { ConnexionPageConsts } from "./utilsAT/ConstantsAT";
-import { getPath, checkURL} from "../functions/CommunFonctions";
+import { getPath } from "../functions/CommunFonctions";
 class ConnexionPage{
 
     static FillEmail(Email){

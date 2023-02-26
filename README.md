@@ -1,13 +1,19 @@
 # Description :
 
-This projet allow to test the leCollectionnist platform web 
+This projet allow to test the leCollectionist platform web 
 
-# link : https://www.lecollectionist.com/
+# link in to LeCollectionist in staging : https://admintool-staging.lecollectionist.com
+
+# link in to AdminTool in staging : https://admintool-staging.lecollectionist.com
+
+# link in to LeCollectionist in Prod : http://www.lecollectionist.com
+
+# link in to AdminTool in prod : https://admintool.lecollectionist.com
 
 ### Configuration and prerequisites ###
 
  # Cypress #
-How to use project
+### How to use project ###
 
 # Step1
 
@@ -65,7 +71,7 @@ Launching Cypress without opening it :
 
     - Staging LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-staging.json
     - Staging AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json
-    
+
     - Prod LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-prod.json
     - Prod AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
 

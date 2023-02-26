@@ -23,7 +23,7 @@ class OurLuxuryVillaAndChaletsPage {
                 return true;
               }, 
                 {
-                delay: 200, // delay before next iteration, ms
+                delay: 500, // delay before next iteration, ms
                 limit: 48,
               }
         );

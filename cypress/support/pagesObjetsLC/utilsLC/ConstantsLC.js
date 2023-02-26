@@ -7,6 +7,7 @@ const ConnexionPageConsts={
     EMAIL_FIELD:"#identifierId",
     NEXT_BTN:".form__submit",
     PASSWORD_FIELD:"#password_login",
+    //input[@id='identifierId']
     CONNEXION_BTN:".form__submit"
     
 }
@@ -21,7 +22,16 @@ const DetailsVillaPageConsts={
     FIRSTNAME_BOX:"[data-testid=inquiry-form__input-firstname]",
     EMAIL_BOX:"[data-testid=inquiry-form__input-email]",
     PHONE_BOX:"#phone_undefined",
-    SEND_REQUEST_BTN:"//button[@data-testid=\'inquiry-form-step__send-request-unlogged\']"
+    SEND_REQUEST_BTN:"//button[@data-testid=\'inquiry-form-step__send-request-unlogged\']",
+    DATE_FIELD:"datepicker__dummy-wrapper > [tabindex=\'-1\']",
+    MONTH_NAME:"//div[@class=\'datepicker__months\']//div[1]//p[@class=\'datepicker__month-name\']",
+    NEXT_MONTH_BTN:".datepicker__month-button--next",
+    ARRIVAL_DATE:"[data-testid=day-'+arrivalDate+']",
+    DEPARTURE_DATE:"[data-testid=day-'+departureDate+']",
+    REQUEST_SENT:"//h5[@class=\'inquiry-success__title\']",
+    REQUEST_SENT_MESSAGE:"//div//p[@class='mb-0 font-bold text-center']",
+    DATES_FIELD_VILLA:"//div[@class='datepicker__dummy-wrapper']",
+    NEXT_MONTH_BTN_VILLA:"//button[@class='datepicker__month-button datepicker__month-button--next ']"
 }
 const OurLuxuryVillaAndChaletsPageConst={
     DATES_FIELD:".datepicker__input--first",
@@ -44,5 +54,6 @@ const OurLuxuryVillaAndChaletsPageConst={
     FIRST_VILLA:"//div[@class='lc-row mb-6']//div[@data-insights-position='1']"
      
    }
+  
 
 export{HomePageConsts,ConnexionPageConsts,ProfilPageConsts,OurLuxuryVillaAndChaletsPageConst,DetailsVillaPageConsts}

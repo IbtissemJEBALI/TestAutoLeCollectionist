@@ -11,5 +11,10 @@ class HomePage{
     static clickOnSearchBTN(){
         getPath(HomePageConsts.BTN_SEARCH).click()
     }
+    static typeVillaName(villa){
+        getPath(HomePageConsts.SEARCH_DESTINATION_BOX).type(villa)
+    }
+    
+
 }
 export default HomePage;
