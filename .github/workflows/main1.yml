@@ -17,3 +17,5 @@ jobs:
         run: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v5
+        with:
+         command: npm run run-staging-admintool-tests-recorder-chrome
