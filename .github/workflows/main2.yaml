@@ -1,22 +1,24 @@
-name: Cypress Tests
+name: Cypress Tests 2
 on:
- workflow_dispatch:
-  inputs:
-    Plateform:
-      description: 'Admin/LC'
-      required: true
-      default: 'Admin'
-    Environnement:
-      description: 'Staging/Prod'
-      required: true
-      default: 'Staging'
-    choice:
-      type: choice
-      description: Choose browser
-      options:
-      - chrome
-      - firefox
-      - edge
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true
 jobs:
  Cypress-Test:
    runs-on: ubuntu-latest
