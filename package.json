@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run-staging-admintool-tests-recorder-chrome":"npx cypress run --browser chrome --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "run-staging-admintool-tests-recorder-firefox":"npx cypress run --browser firefox --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "run-staging-admintool-tests-chrome":"npx cypress run --browser chrome --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "run-staging-admintool-tests-firefox":"npx cypress run --browser firefox --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "generate-cucumber-report":"node cucumber-html-report.js"
   },
   "keywords": [],
   "author": "",

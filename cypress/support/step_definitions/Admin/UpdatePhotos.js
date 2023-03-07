@@ -3,20 +3,6 @@ import ConnexionPage from "../../pagesObjectsAT/ConnexionPage";
 import InfoPage from "../../pagesObjectsAT/InfoPage";
 import RessourcesPage from "../../pagesObjectsAT/RessourcesPages";
 
-Given('Je suis sur la page de connexion de l\’admin Tool', ()=>{
-    let baseURL=Cypress.config().baseUrl
-    cy.visit(baseURL)
-    
-} )
-
-When('Je renseigne les identifiants de connexion',()=>{
-    ConnexionPage.FillEmail("ibtissem.jebali@lecollectionist.com")
-    ConnexionPage.FillPassword("85Kk92C$mhr!")
-} )
-
-And ('Je clique sur se connecter',()=>{
-    ConnexionPage.ClickOnConnexionBTN()
-} ) 
 
 Then ('Je dois vérifier que je suis redirigé vers la page intitulée {string}',(title)=>{
     HousePage.isHouseURLDisplayed(title)
@@ -26,7 +12,7 @@ When('Je cherche une {string}',(villa)=>{
 } )
 And ('Je clique sur la villa',()=>{
     HousePage.ClickOnVilla()
-    
+
 })
 Then ('Je dois vérifier que je suis rederigé vers la page intitulée {string}',(title)=>{
     InfoPage.isInfoPageURLDisplayed(title)

@@ -15,5 +15,9 @@ function getPath(path) {
  function isTextVisible(element,txt){
     getPath(element).should("have.text",txt);
  }
+ function isTextContain(element,txt){
+   getPath(element).should("contain",txt);
+}
 
-export  {getPath,checkURL,isElementVisible,isTextVisible}
+
+export  {getPath,checkURL,isElementVisible,isTextVisible,isTextContain}
