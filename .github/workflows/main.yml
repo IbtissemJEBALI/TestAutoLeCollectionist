@@ -1,19 +1,23 @@
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
+      Browsers:
+        description: 'Browsers'
         required: true
-        default: 'warning'
+        default: 'chrome'
         type: choice
         options:
-        - info
-        - warning
-        - debug
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
+        - chrome
+        - firefox
+        - edge
+      Plateforme:
+        description: 'Admin/LC'
+        required: true
+        default: 'Admin'
+        type: choice
+        options:
+        - Admin
+        - LC
       environment:
         description: 'Environment to run tests against'
         type: environment
