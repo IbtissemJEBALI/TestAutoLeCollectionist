@@ -18,5 +18,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          config-file: ${GITHUB_WORKSPACE}/Cypress/ConfigsFiles/Admin/admintool-staging.json
+          config-file: cypress/ConfigsFiles/Admin/admintool-staging.json
           spec : cypress/integration/Features/Admin/*.feature
