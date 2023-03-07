@@ -1,1 +1,39 @@
-
+name: Cypress Tests
+on:
+ workflow_dispatch:
+  inputs:
+    Plateform:
+      description: 'Admin/LC'
+      required: true
+      default: 'Admin'
+    Environnement:
+      description: 'Staging/Prod'
+      required: true
+      default: 'Staging'
+    choice:
+      type: choice
+      description: Choose browser
+      options:
+      - chrome
+      - firefox
+      - edge
+jobs:
+ Cypress-Test:
+   runs-on: ubuntu-latest
+   steps: 
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install node
+        uses: actions/setup-node@v2
+        with:
+           node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+         command: npx cypress run --browser chrome --config-file cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/AddRoomsAndEquipements.feature'
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+         command: npm run generate-cucumber-report
