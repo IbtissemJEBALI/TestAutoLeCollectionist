@@ -11,7 +11,6 @@ jobs:
        uses: actions/checkout@v2
  
      - name: Run Cypress Test
-       uses: cypress-io/github-action@v4
+       uses: cypress-io/github-action@v5
        with:
          command: npm run run-staging-admintool-tests-recorder-chrome
-         browser: chrome
