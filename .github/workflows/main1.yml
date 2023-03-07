@@ -18,5 +18,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          config-file: cypress/ConfigsFiles/Admin/admintool-staging.json
-          spec : cypress/integration/Features/Admin/*.feature
+         command: npx cypress run --browser chrome --config-file cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'
