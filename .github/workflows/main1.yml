@@ -18,4 +18,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-         command: npm run run-staging-admintool-tests-recorder-chrome
+          config-file: Cypress/ConfigsFiles/Admin/admintool-staging.json
+          spec : cypress/integration/Features/Admin/*.feature
