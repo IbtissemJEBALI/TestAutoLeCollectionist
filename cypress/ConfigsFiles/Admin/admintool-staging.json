@@ -1,9 +1,9 @@
-{ 
-        "testFiles": "**/Features/Admin/*.feature",
-        "baseUrl":"https://admintool-staging.lecollectionist.com",
-        "defaultCommandTimeout": 10000,
-        "viewportWidth": 1500,
-        "viewportHeight": 1200,
-        "env" :{ 
-        }
+{
+  "testFiles": "**/Features/Admin/*.feature",
+  "baseUrl": "https://admintool-staging.lecollectionist.com",
+  "defaultCommandTimeout": 10000,
+  "viewportWidth": 1500,
+  "viewportHeight": 1200,
+  "env": {},
+  "projectId": "r4m752"
 }

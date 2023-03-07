@@ -2,13 +2,13 @@
 
 This projet allow to test the leCollectionist platform web 
 
-# link in to LeCollectionist in staging : https://admintool-staging.lecollectionist.com
+### link in to LeCollectionist in staging : https://admintool-staging.lecollectionist.com ###
 
-# link in to AdminTool in staging : https://admintool-staging.lecollectionist.com
+### link in to AdminTool in staging : https://admintool-staging.lecollectionist.com ###
 
-# link in to LeCollectionist in Prod : http://www.lecollectionist.com
+### link in to LeCollectionist in Prod : http://www.lecollectionist.com ###
 
-# link in to AdminTool in prod : https://admintool.lecollectionist.com
+### link in to AdminTool in prod : https://admintool.lecollectionist.com ###
 
 ### Configuration and prerequisites ###
 
