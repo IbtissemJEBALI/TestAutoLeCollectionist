@@ -50,10 +50,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-         command: npx cypress run --browser ${{ inputs.Browsers }} --config-file cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/AddRoomsAndEquipements.feature'
-         record: true
-        env:
-         CYPRESS_RECORD_KEY: ${{ secrets.RECORDING_KEY }}
+         command: npx cypress run --browser ${{ inputs.Browsers }} --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/AddRoomsAndEquipements.feature'
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
