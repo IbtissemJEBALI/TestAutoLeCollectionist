@@ -18,20 +18,34 @@ on:
         options:
         - Admin
         - LC
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
+      Environnement:
+        description: 'Staging/preprod/prod'
         required: true
+        default: 'Staging'
+        type: choice
+        options:
+        - Staging
+        - Preprod
+        - Prod
+
 
 jobs:
-  log-the-inputs:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          echo "Log level: $LEVEL"
-          echo "Tags: $TAGS"
-          echo "Environment: $ENVIRONMENT"
-        env:
-          LEVEL: ${{ inputs.logLevel }}
-          TAGS: ${{ inputs.tags }}
-          ENVIRONMENT: ${{ inputs.environment }}
+ Cypress-Test:
+   runs-on: ubuntu-latest
+   steps: 
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install node
+        uses: actions/setup-node@v2
+        with:
+           node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+         command: npx cypress run --browser chrome --config-file cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/AddRoomsAndEquipements.feature'
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+         command: npm run generate-cucumber-report
