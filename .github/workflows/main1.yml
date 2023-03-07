@@ -1,8 +1,22 @@
 name: Cypress Tests
 on:
- push:
-   branches:
-     - new-tests
+ workflow_dispatch:
+  inputs:
+    Plateform:
+      description: 'Admin/LC'
+      required: true
+      default: 'Admin'
+    Environnement:
+      description: 'Staging/Prod'
+      required: true
+      default: 'Staging'
+    choice:
+      type: choice
+      description: Choose browser
+      options:
+      - chrome
+      - firefox
+      - edge
 jobs:
  Cypress-Test:
    runs-on: ubuntu-latest
@@ -23,8 +37,3 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
          command: npm run generate-cucumber-report
-      - name: HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v2
-        with:
-         html_file: '*/reports/cucumber-report.html/index.html'
