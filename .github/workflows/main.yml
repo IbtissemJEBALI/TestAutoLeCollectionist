@@ -53,11 +53,11 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
          command: npx cypress run --browser ${{ inputs.Browsers }} --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file cypress/ConfigsFiles/${{ inputs.Plateforme }}/${{ inputs.ConfigFiles }}
-      - name: Cypress run
+      - name: Generate Cucumber Report
         uses: cypress-io/github-action@v5
         with:
          command: npm run generate-cucumber-report
-      - name: Cypress run
+      - name: Generate XML Report
         uses: cypress-io/github-action@v5
         with:
          command: npm run postreport
