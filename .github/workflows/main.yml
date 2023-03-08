@@ -48,6 +48,12 @@ jobs:
           if [[ "${{ github.event.inputs.Plateforme }}" == "User" ]]; then
                 echo "configfile=configfileString::cypress/ConfigsFiles/User/lc-staging.json" >> $GITHUB_ENV
           fi
+          echo "$GITHUB_ENV"
+          echo "$configfile"
+          echo "$configfileString"
+          echo "configfile"
+          echo "configfileString"
+  
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install node
