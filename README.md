@@ -51,7 +51,8 @@ Open VS Code terminal and run this commands  :
     - npm install --save-dev cypress-cucumber-preprocessor 
     - npm install -D cypress-xpath
     - npm i -D cypress-recurse
-    - npm install multiple-cucumber-html-reporter --save-dev 
+    - npm install multiple-cucumber-html-reporter --save-dev
+    - npm install cypress-multi-reporters --save-dev : Handle multiple reporter
 
 # Step6 : How to run tests ?
 

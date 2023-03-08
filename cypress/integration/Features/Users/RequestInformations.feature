@@ -4,7 +4,7 @@ Faire une recherche et une demande de renseignements d'une maison à partir une 
 Scenario Outline: Faire une recherche et une demande de renseignements d'une maison à partir une déstination
 Given Je suis sur la page d'acceuil
 When Je cherche la destination "<destination>"
-Then Je dois vérifier que je suis rederigé vers la page intitulée "Nos villas et chalets de luxe - Le Collectionist"
+Then Je dois vérifier que je suis rederigé vers la page intitulée "recherche"
 When Je fait une recherche pour le mois d'"<mois>", avec une date de départ du "<arrivalDate>" au "<departureDate>"
 And Je définie le budget maximal de "<budget>"
 And J'applique le filtrage 'Nombre de chambres croissant'

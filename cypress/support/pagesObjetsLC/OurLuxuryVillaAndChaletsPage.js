@@ -76,13 +76,16 @@ class OurLuxuryVillaAndChaletsPage {
         getPath(OurLuxuryVillaAndChaletsPageConst.VILLA_LIST).should('be.visible')
     }
     static clickOnFirstVilla(){
+        cy.wait(2000)
         getPath(OurLuxuryVillaAndChaletsPageConst.FIRST_VILLA).click()
     }
     static clickOnNextMonthBTN(){
         getPath(OurLuxuryVillaAndChaletsPageConst.NEXT_MONTH_BTN).click()
     }
     static selectFirstVillaOnSameTab(){
-        getPath('//div[@data-insights-position=\'1\']//a[@class=\'house-card__wrapper border\']').invoke('removeAttr', 'target').click()
+        cy.scrollTo('top');
+        cy.wait(2000)
+        getPath(OurLuxuryVillaAndChaletsPageConst.FIRST_VILLA).invoke('removeAttr', 'target').click()
     }
 }
 export default OurLuxuryVillaAndChaletsPage;

@@ -1,11 +1,21 @@
-{ 
-        "testFiles": "**/Features/Admin/*.feature",
+{
+        "testFiles":"**/Features/Admin/*.feature",
         "baseUrl":"https://admintool.lecollectionist.com",
-        "defaultCommandTimeout": 10000,
-        "viewportWidth": 1500,
-        "viewportHeight": 1200,
-        "env" :{ 
+        "defaultCommandTimeout":20000,
+        "viewportWidth":1500,
+        "viewportHeight":1200,
+        "env":{
+           "username":"lecollectionist",
+           "password":"lecollectionis-t",
+           "userEmail":"ibtissem.jebali@lecollectionist.com",
+           "userPassword":"85Kk92C$mhr!"
         },
-        "projectId": "r4m752"
-
+        "projectId": "r4m752",
+        "reporter": "cypress-multi-reporters",
+        "reporterOptions": {
+        "reporterEnabled": "mocha-junit-reporter",
+        "mochaJunitReporterReporterOptions": {
+          "mochaFile": "cypress/results/results-[hash].xml"
+        }
+} 
 }

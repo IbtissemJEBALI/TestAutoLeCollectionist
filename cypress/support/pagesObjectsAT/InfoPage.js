@@ -27,29 +27,18 @@ class InfoPage{
         getPath(InfoPageConst.ONLINE_RESERVATION_BTN).click()
     }
     static AddScore(score){
-        getPath(InfoPageConst.EXCLUSIVITY_BTN).click()
-
-        getPath(InfoPageConst.UP_SCORE_BTN).click()
-        /*getPath(InfoPageConst.SCORE_BOX).contain
-
-
-        for ( score = 0; score < 100; score++) { 
-         if (score >= 50){
-            getPath(InfoPageConst.UP_SCORE_BTN).click()
-         }
-         else { if(score <= 50){
-            getPath(InfoPageConst.DOWN_SCORE_BTN).click()
-                
-        }}
-    
-        }*/
-
+        getPath(InfoPageConst.SCORE_BOX).clear()
+        getPath(InfoPageConst.SCORE_BOX).type(score)
     }
     static ClickOnSavePromoteSection(){
         getPath(InfoPageConst.SAVE_BTN).click()
     }
     static isHouseScoreVisible(score){
         isTextVisible(InfoPageConst.SCORE_BOX_READ_MODE,score)
+    }
+    static isGreenCheckVisible(){
+        //isElementVisible(InfoPageConst.GREEN_CHECK_EXCLUSIVITY)
+        //isElementVisible(InfoPageConst.GREEN_CHECK_ONLINE_RESERVATION)
     }
     static ClickOnEditHouseInfomationBTN(){
         getPath(InfoPageConst.HOUSE_INFORMATION_EDIT_BTN).click()
@@ -84,6 +73,27 @@ class InfoPage{
     }
     static isSurfaceSizeVisible(surface){
         isTextVisible(InfoPageConst.SURFACE_VILLA_READ_MODE,surface)
+    }
+    static ClickOnEditFurtherInformation(){
+        getPath(InfoPageConst.FUTHER_INFORMATION_EDIT_BTN).click()
+    }
+    static ClickOnSuitableForDesableBTN(){
+        getPath(InfoPageConst.SUITABLE_FOR_DESABLE_BTN).click()
+    }
+    static AddSuitableForDesableComment(commentaire1){
+        getPath(InfoPageConst.SUITABLE_FOR_DESABLE_BOX).clear()
+        getPath(InfoPageConst.SUITABLE_FOR_DESABLE_BOX).type(commentaire1)
+    }
+    static ClickOnLiveStaffBTN(){
+        getPath(InfoPageConst.LIVE_IN_STAFF_BTN).click()
+    }
+    static AddLiveStaffComment(commentaire2){
+        getPath(InfoPageConst.LIVE_IN_STAFF_BOX).clear()
+        getPath(InfoPageConst.LIVE_IN_STAFF_BOX).type(commentaire2)
+    }
+    static isCommentVisible(commentaire1,commentaire2){
+        isTextVisible(InfoPageConst.SUITABLE_FOR_DESABLE_COMMENT,commentaire1)
+        isTextVisible(InfoPageConst.LIVE_IN_STAFF_COMMENT,commentaire2)
     }
 }
 export default InfoPage;

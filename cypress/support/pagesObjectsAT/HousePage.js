@@ -14,7 +14,7 @@ class HousePage{
        
     }
     static ClickOnVilla(){
-        cy.wait(1000)
+        cy.wait(2000)
         getPath(HousePageConsts.VILLA_FILED).click()
     }
 

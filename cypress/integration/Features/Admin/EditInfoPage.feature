@@ -31,6 +31,11 @@ And Je clique sur enregistrer
 Then Je dois vérifier que le nombre de chambres "5", le nombre de salles de bains "3" et la surface est "550" mètre renseigner précédemment s'affiche dans la section informations maison 
 
 Scenario: Section 3 : Informations complémentaire
-When Je clique sur editer dans la section information complémentaire 
+When Je clique sur editer dans la section information complémentaire
 Then Je dois vérifier que la section s'affiche en vue éditable
-When Je 
+When Je clique sur adapté aux personnes à mobilité réduite
+And J'ajoute un commentaire "Des espaces de passages larges pour les fauteuils roulants"
+And Je clique sur autre
+And J'ajout un commentaire "Services d'aide aux repas et d'accompagnements"
+And Je clique sur enregistrer
+Then Je dois vérifier que les commentaires "Des espaces de passages larges pour les fauteuils roulants" et "Services d'aide aux repas et d'accompagnements" s'affiche dans la section mise en avant

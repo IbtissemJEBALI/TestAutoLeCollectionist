@@ -1,5 +1,4 @@
 import HousePage from "../../pagesObjectsAT/HousePage";
-import ConnexionPage from "../../pagesObjectsAT/ConnexionPage";
 import InfoPage from "../../pagesObjectsAT/InfoPage";
 import RessourcesPage from "../../pagesObjectsAT/RessourcesPages";
 
@@ -26,7 +25,6 @@ Then ('Je dois vérifier que je suis rederigé vers la page intitulée {string}'
  
 When ('J\'ajoute des photos' ,()=>{
     RessourcesPage.ClickOnSelectFile()
-   
 })
 Then ('Je dois vérifier que les photos ajoutées sont affichés au-dessous',()=>{
    

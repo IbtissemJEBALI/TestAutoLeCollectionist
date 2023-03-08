@@ -4,19 +4,20 @@ import ProfilPage from "../../pagesObjetsLC/ProfilPage";
 
 Given ('Je suis sur la page d\'accueil du site Le Collectionsit',()=>{
     let baseURL=Cypress.config().baseUrl
-    //cy.visit(baseURL)
     cy.visit(baseURL, {
     auth: {
-        username: 'lecollectionist',
-        password: 'lecollectionis-t',
+        username: Cypress.env().username,
+        password: Cypress.env().password,
     }
-});
+    });
 } )
 When ('Je clique sur le bouton profil présent sur la barre de navigation' ,()=>{
     HomePage.ClickOnProfilBTN()
+   // HomePage.ClickOnMenuBTN()
+    //HomePage.ClickOnMyAccountBTN()
 } )
 Then ('Je dois vérifier que je suis rederigé vers la page intitulée {string}',(title)=>{
-   // ConnexionPage.isConnexionURLDisplayed(title)
+    ConnexionPage.isConnexionURLDisplayed(title)
 } )
 When ('Je renseigne mon {string} de connexion',(email)=>{
    ConnexionPage.FillEmail(email)

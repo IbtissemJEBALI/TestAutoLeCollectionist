@@ -5,6 +5,12 @@ class HomePage{
     static ClickOnProfilBTN(){
         getPath(HomePageConsts.PROFIL_BTN).click()
     }
+    static ClickOnMenuBTN(){
+        getPath(HomePageConsts.MENU_BTN).click()
+    }
+    static ClickOnMyAccountBTN(){
+        getPath(HomePageConsts.MY_ACCOUNT_BTN).click()
+    }
     static typeDestination(destination){
         getPath(HomePageConsts.SEARCH_DESTINATION_BOX).type(destination)
     }

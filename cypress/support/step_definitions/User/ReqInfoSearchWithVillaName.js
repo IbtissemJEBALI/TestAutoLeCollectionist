@@ -5,8 +5,8 @@ Given ('Je suis sur la page d\'acceuil',()=>{
     let baseURL=Cypress.config().baseUrl
     cy.visit(baseURL, {
         auth: {
-            username: 'lecollectionist',
-            password: 'lecollectionis-t',
+            username: Cypress.env().username,
+            password: Cypress.env().password,
         }
     });
 

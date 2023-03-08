@@ -1,5 +1,4 @@
 import HousePage from "../../pagesObjectsAT/HousePage";
-import ConnexionPage from "../../pagesObjectsAT/ConnexionPage";
 import FinancePage from "../../pagesObjectsAT/FinancePage";
 import SalesPage from "../../pagesObjectsAT/SalesPage";
 import SalesOpenPage from "../../pagesObjectsAT/SalesOpenPage";

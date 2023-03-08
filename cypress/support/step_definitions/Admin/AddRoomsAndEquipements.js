@@ -1,8 +1,6 @@
 import HousePage from "../../pagesObjectsAT/HousePage";
-import ConnexionPage from "../../pagesObjectsAT/ConnexionPage";
 import InfoPage from "../../pagesObjectsAT/InfoPage";
 import PiecesAndEquipementPage from "../../pagesObjectsAT/PiecesAndEquipementPage";
-import { PiecesAndEquipementPageConst } from "../../pagesObjectsAT/utilsAT/ConstantsAT";
 
 //SC1 : "Maison principale : Ajout d'une pièce et des équipements"
 Then ('Je dois vérifier que je suis redirigé vers la page intitulée {string}',(title)=>{
@@ -13,7 +11,6 @@ When('Je cherche une {string}',(villa)=>{
 } )
 And ('Je clique sur la villa',()=>{
     HousePage.ClickOnVilla()
-    
 })
 Then ('Je dois vérifier que je suis rederigé vers la page intitulée {string}',(title)=>{
     InfoPage.isInfoPageURLDisplayed(title)

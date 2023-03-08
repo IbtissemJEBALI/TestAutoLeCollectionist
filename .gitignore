@@ -5,3 +5,4 @@ reports
 cypress/screenshots/
 cypress/videos/
 .DS_Store
+cypress/results/

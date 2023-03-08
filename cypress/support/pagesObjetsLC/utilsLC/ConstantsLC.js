@@ -1,7 +1,9 @@
 const HomePageConsts={
     PROFIL_BTN:"[data-testid=navigation-icons-desktop-link-account] > .icn",
     BTN_SEARCH:".base-search__btn",
-    SEARCH_DESTINATION_BOX:".multiselect__single > .flex-none"
+    SEARCH_DESTINATION_BOX:".multiselect__single > .flex-none",
+    MENU_BTN:"//button[@data-testid='the-header-burger']",
+    MY_ACCOUNT_BTN:".last-link"
 }
 const ConnexionPageConsts={
     EMAIL_FIELD:"#identifierId",
@@ -18,6 +20,7 @@ const ProfilPageConsts={
 }
 const DetailsVillaPageConsts={
     INFORMATION_REQUEST_BTN:"//div[@class=\'relative lc_tooltip lc_tooltip--hover\']//button[contains(text(),\'Demande de renseignements\')]",
+    INFO_REQ_BTN:"//button[@data-testid='inquiry-date-picker__inquiry-btn']",
     LASTNAME_BOX:"[data-testid=inquiry-form__input-lastname]",
     FIRSTNAME_BOX:"[data-testid=inquiry-form__input-firstname]",
     EMAIL_BOX:"[data-testid=inquiry-form__input-email]",
@@ -51,9 +54,8 @@ const OurLuxuryVillaAndChaletsPageConst={
     PRIX_DECROISSANT_BTN:"//span[contains(text(),\'Prix décroissant\')]",
     FIELD_RESULT:"//h1[@class=\'w-full search__result-number\']",
     VILLA_LIST:"//div[@class='lc-row mb-6']//div[@class='house-card h-full']",
-    FIRST_VILLA:"//div[@class='lc-row mb-6']//div[@data-insights-position='1']"
-     
-   }
+    FIRST_VILLA:"//div[@data-insights-position=\'1\']//a[@class=\'house-card__wrapper border\']",
+}
   
 
 export{HomePageConsts,ConnexionPageConsts,ProfilPageConsts,OurLuxuryVillaAndChaletsPageConst,DetailsVillaPageConsts}

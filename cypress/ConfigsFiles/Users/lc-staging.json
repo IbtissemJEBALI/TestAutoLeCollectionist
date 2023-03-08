@@ -2,11 +2,22 @@
         "testFiles": "**/Features/Users/*.feature",
         "baseUrl":"https://staging.lecollectionist.com/fr",
         "defaultCommandTimeout": 20000,
-        "viewportWidth": 1200,
-        "viewportHeight":800,
-        "env" :{ 
+        "viewportWidth": 1500,
+        "viewportHeight": 1200,
+        "env":{
+                "username":"lecollectionist",
+                "password":"lecollectionis-t",
+                "userEmail":"ibtissem.jebali@lecollectionist.com",
+                "userPassword":"85Kk92C$mhr!"
         },
-        "projectId": "r4m752"
+        "projectId": "r4m752",
+        "reporter": "cypress-multi-reporters",
+        "reporterOptions": {
+        "reporterEnabled": "mocha-junit-reporter",
+        "mochaJunitReporterReporterOptions": {
+          "mochaFile": "cypress/results/results-[hash].xml"
+        }
+    }
 
 }
         

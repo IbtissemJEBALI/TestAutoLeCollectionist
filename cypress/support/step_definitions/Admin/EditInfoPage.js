@@ -1,4 +1,3 @@
-import HousePage from "../../pagesObjectsAT/HousePage";
 import InfoPage from "../../pagesObjectsAT/InfoPage";
 
 //SC1 : Section 1 : Mise en avant
@@ -15,7 +14,7 @@ And ('Je clique sur reservation en ligne',()=>{
    InfoPage.ClickOnOnlineReservation()
 }) 
 And ('J\'ajoute un score {string} à la maison',(score)=>{
-    InfoPage.AddScore()
+    InfoPage.AddScore(score)
 }) 
 And ('Je clique sur enregistrer',()=>{
     InfoPage.ClickOnSavePromoteSection()
@@ -45,3 +44,23 @@ Then ('Je dois vérifier que le nombre de chambres {string}, le nombre de salles
   InfoPage.isBathroomsNumberVisible(bathrooms)
   //InfoPage.isSurfaceSizeVisible(surface)
 })  
+
+//SC3 : Section 3 : information complémentaire  
+When('Je clique sur editer dans la section information complémentaire',()=>{
+    InfoPage.ClickOnEditFurtherInformation()
+}) 
+When ('Je clique sur adapté aux personnes à mobilité réduite',()=>{
+    InfoPage.ClickOnSuitableForDesableBTN()
+}) 
+And ('J\'ajoute un commentaire {string}',(commentaire1)=>{
+    InfoPage.AddSuitableForDesableComment(commentaire1)
+}) 
+And ('Je clique sur autre',()=>{
+    InfoPage.ClickOnLiveStaffBTN()
+}) 
+And ('J\'ajout un commentaire {string}',(commentaire2)=>{
+    InfoPage.AddLiveStaffComment(commentaire2)
+}) 
+Then ('Je dois vérifier que les commentaires {string} et {string} s\'affiche dans la section mise en avant',(commentaire1,commentaire2)=>{
+    InfoPage.isCommentVisible(commentaire1,commentaire2)
+}) 

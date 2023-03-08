@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-staging-admintool-tests-recorder-chrome":"npx cypress run --browser chrome --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
-    "run-staging-admintool-tests-recorder-firefox":"npx cypress run --browser firefox --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
-    "run-staging-admintool-tests-chrome":"npx cypress run --browser chrome --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
-    "run-staging-admintool-tests-firefox":"npx cypress run --browser firefox --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
-    "generate-cucumber-report":"node cucumber-html-report.js"
+    "run-staging-admintool-tests-recorder-chrome": "npx cypress run --browser chrome --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "run-staging-admintool-tests-recorder-firefox": "npx cypress run --browser firefox --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "run-staging-admintool-tests-chrome": "npx cypress run --browser chrome --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "run-staging-admintool-tests-firefox": "npx cypress run --browser firefox --config-file Cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/*.feature'",
+    "generate-cucumber-report": "node cucumber-html-report.js",
+    "postreport": "jrm ./cypress/results/combined-report.xml \"./cypress/results/results-*.xml\""
+
   },
   "keywords": [],
   "author": "",
@@ -16,8 +18,10 @@
   "devDependencies": {
     "cypress": "^8.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-multi-reporters": "^1.6.2",
     "cypress-recurse": "^1.27.0",
     "cypress-xpath": "^2.0.1",
+    "mocha-junit-reporter": "^2.2.0",
     "multiple-cucumber-html-reporter": "^3.1.0"
   },
   "cypress-cucumber-preprocessor": {

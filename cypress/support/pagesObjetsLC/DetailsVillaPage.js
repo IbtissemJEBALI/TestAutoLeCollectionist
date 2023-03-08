@@ -4,7 +4,8 @@ import { recurse } from "cypress-recurse";
 class DetailsVillaPage {
     static clickOnInformationRequestBTN(){
         cy.scrollTo('top');
-        getPath(DetailsVillaPageConsts.INFORMATION_REQUEST_BTN).click()
+        cy.wait(2000)
+        getPath(DetailsVillaPageConsts.INFO_REQ_BTN).click()
     }
     static FillFirstName(FirstName){
         getPath(DetailsVillaPageConsts.FIRSTNAME_BOX).type(FirstName)

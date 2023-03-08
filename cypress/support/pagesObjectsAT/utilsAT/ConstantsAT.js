@@ -29,10 +29,10 @@ const InfoPageConst={
     EXCLUSIVITY_BTN:":nth-child(1) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
     EXCLUSIVITY_TYPE_BOX:"//div[@class='md:col-start-1']//div[@data-testid='multiselect']",
     PINNED_HOUSE_BTN:"//div[@class='md:col-start-1'][3]//input[@data-testid='checkbox-toggle-input']",
-    ONLINE_RESERVATION_BTN:":nth-child(4) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
-    FLEXIBLE_CANCELLATION:"//div[@class='md:col-start-2'][2]//input[@data-testid='checkbox-toggle-input']",
-    FLEXIBLE_CANCELLATION_TYPE_BOX:"//div[@class='md:col-start-2']//div[@class='multiselect-wrapper']",
+    ONLINE_RESERVATION_BTN:":nth-child(5) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
     SCORE_BOX:"//input[@data-testid='score']",
+    GREEN_CHECK_ONLINE_RESERVATION:":.md\:grid > :nth-child(5) > [data-testid=base-field-read-mode] > .base-icon",
+    GREEN_CHECK_EXCLUSIVITY:":nth-child(1) > .md\:grid > :nth-child(1) > [data-testid=base-field-read-mode] > .base-icon",
     SCORE_BOX_READ_MODE:".self-center > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-value]",
     UP_SCORE_BTN:"//button[@data-testid='inputNumber-next-button']",
     DOWN_SCORE_BTN:"//button[@data-testid='inputNumber-prev-button']",
@@ -52,6 +52,12 @@ const InfoPageConst={
 
 
     FUTHER_INFORMATION_EDIT_BTN:"//div[@id='furtherInformationAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
+    SUITABLE_FOR_DESABLE_BTN:":nth-child(3) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
+    SUITABLE_FOR_DESABLE_BOX:"//textarea[@id='suitableForPeopleWithReducedMobilityComment']",
+    LIVE_IN_STAFF_BTN:":nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
+    LIVE_IN_STAFF_BOX:"//textarea[@id='liveInStaffComment']",
+    SUITABLE_FOR_DESABLE_COMMENT:":nth-child(4) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-textedit]",
+    LIVE_IN_STAFF_COMMENT:"#furtherInformationAccordion > [data-testid=lc-accordion-body] > .lc-accordion-body-wrapper > [data-testid=baseForm] > :nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-textedit]"
 }
 const RessourcesPageConst={
     SELECT_FILE_BTN:"//DIV[@class='fsp-select-labels']",
