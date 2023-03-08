@@ -38,14 +38,7 @@ on:
 jobs:
  Cypress-Test:
    runs-on: ubuntu-latest
-   steps:
-      - name: Set configs file
-        env:
-          AdminConfig: ${{ contains(inputs.Plateforme, '[Admin]') }}
-          run: |
-            echo "flag=${AdminConfig}" >> $GITHUB_ENV
-            echo "set flag to ${AdminConfig}"
-            
+   steps:            
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install node
