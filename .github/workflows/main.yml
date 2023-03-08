@@ -68,3 +68,8 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         with:
           report_paths: '**/cypress/results/combined-report.xml'
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+         name: my-artifact
+         path: reports/cucumber-report/
