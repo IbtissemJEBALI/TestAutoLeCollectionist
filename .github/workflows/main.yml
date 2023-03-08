@@ -43,12 +43,13 @@ jobs:
         id: Setconfigsfile
         run: |
           if [[ "${{ inputs.Plateforme }}" == "Admin" ]]; then
-                echo "::set-output configfile=configfileString::cypress/ConfigsFiles/Admin/admintool-staging.json"
+                echo "configfile=cypress/ConfigsFiles/Admin/admintool-staging.json" >> $GITHUB_STATE
           fi
           if [[ "${{ inputs.Plateforme }}" == "User" ]]; then
-                echo "::set-output configfile=configfileString::cypress/ConfigsFiles/Users/lc-staging.json"
+                echo "configfile=cypress/ConfigsFiles/Users/lc-staging.json" >> $GITHUB_STATE
           fi
           ${{ steps.Setconfigsfile.outputs.configfileString }}
+          ${{ steps.Setconfigsfile.configfileString }}
   
       - name: Checkout
         uses: actions/checkout@v2
