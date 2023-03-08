@@ -11,22 +11,23 @@ on:
         - firefox
         - edge
       Plateforme:
-        description: 'Admin/LC'
+        description: 'Admin/Users'
         required: true
         default: 'Admin'
         type: choice
         options:
         - Admin
-        - LC
-      Environnement:
-        description: 'Staging/preprod/prod'
+        - Users
+      ConfigFiles:
+        description: 'Config files to start tests'
         required: true
-        default: 'Staging'
+        default: 'admintool-staging.json'
         type: choice
         options:
-        - Staging
-        - Preprod
-        - Prod
+        - admintool-staging.json
+        - lc-staging.json
+        - admintool-prod.json
+        - lc-prod.json
       Features:
         description: 'Choose feature to run'
         required: true
@@ -50,7 +51,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-         command: npx cypress run --browser ${{ inputs.Browsers }} --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file cypress/ConfigsFiles/Admin/admintool-staging.json --spec 'cypress/integration/Features/Admin/AddRoomsAndEquipements.feature'
+         command: npx cypress run --browser ${{ inputs.Browsers }} --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file cypress/ConfigsFiles/${{ inputs.Plateforme }}/${{ inputs.ConfigFiles }}
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
