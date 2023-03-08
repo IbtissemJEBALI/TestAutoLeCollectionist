@@ -65,5 +65,5 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v2
         if: always()
         with:
-        files: |
+         files: |
           ./cypress/results/combined-report.xml
