@@ -78,10 +78,10 @@ jobs:
         uses: rtCamp/action-slack-notify@v2
         if: success() || failure() # always run even if the previous step fails
         env:
-         SLACK_CHANNEL: notif-to-delete
+         SLACK_CHANNEL: tests-auto-notif
          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
          SLACK_ICON: https://github.com/rtCamp.png?size=48
-         SLACK_MESSAGE: Tests are runned on ${{ inputs.Plateforme }} platform using ${{ inputs.Browsers }} browser and ${{ inputs.ConfigFiles }} configuration :rocket:
+         SLACK_MESSAGE: Tests are runned on ${{ inputs.Plateforme }} platform using ${{ inputs.Browsers }} browser and ${{ inputs.ConfigFiles }} configuration :rocket:'
          SLACK_TITLE: Automated tests
          SLACK_USERNAME: rtCamp
          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
