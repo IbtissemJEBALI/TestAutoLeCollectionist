@@ -14,8 +14,7 @@ const FinancePageConsts={
    }
 const SalesPageConsts={
     SALE:":nth-child(1) > [data-testid=base-row_desktop] > [data-testid=base-cell_nextStep] > [data-testid=base-cell--link] > .grid > :nth-child(1) > .w-auto"
-    //"nth-child(1) > [data-testid=base-row_desktop]"
-   }
+  }
 const SalesOpenPageConsts={
    CONTRACT_CLIENT_DATES:"//div[@class='flex items-baseline flex-wrap gap-2']//span",
    CONTRACT_OWNER_DATES:"//div[@class='flex items-baseline flex-wrap gap-2']//span"
@@ -24,11 +23,9 @@ const SalesOpenPageConsts={
 const InfoPageConst={
     RESSOURCES_ONGLET:"//li[@id='tab-2']",
     PIECES_AND_EQUIPEMENT_ONGLET:"//li[@id='tab-1'][@data-testid='basetabsnav-item']",
-    
     PROMOTE_EDIT_BTN:"//div[@id='promoteAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
     EXCLUSIVITY_BTN:":nth-child(1) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
     EXCLUSIVITY_TYPE_BOX:"//div[@class='md:col-start-1']//div[@data-testid='multiselect']",
-    PINNED_HOUSE_BTN:"//div[@class='md:col-start-1'][3]//input[@data-testid='checkbox-toggle-input']",
     ONLINE_RESERVATION_BTN:":nth-child(5) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
     SCORE_BOX:"//input[@data-testid='score']",
     GREEN_CHECK_ONLINE_RESERVATION:":.md\:grid > :nth-child(5) > [data-testid=base-field-read-mode] > .base-icon",
@@ -37,7 +34,6 @@ const InfoPageConst={
     UP_SCORE_BTN:"//button[@data-testid='inputNumber-next-button']",
     DOWN_SCORE_BTN:"//button[@data-testid='inputNumber-prev-button']",
     SAVE_BTN:"//button[@data-testid='baseform-button-primary']",
-    
     HOUSE_INFORMATION_EDIT_BTN:"//div[@id='houseInformationAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
     SURFACE_VILLA_BOX:"//input[@id='surface']",
     BEDROOMS_NUMBER_BOX:"//input[@id='bedrooms']",
@@ -49,15 +45,30 @@ const InfoPageConst={
     BEDROOMS_NUMBER_BOX_READ_MODE:":nth-child(8) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-value]",
     BATHROOMS_NUMBER_BOX_READ_MODE:":nth-child(10) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-value]",
     SURFACE_VILLA_READ_MODE:":nth-child(3) > .md\:grid > :nth-child(3) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-value]",
-
-
     FUTHER_INFORMATION_EDIT_BTN:"//div[@id='furtherInformationAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
     SUITABLE_FOR_DESABLE_BTN:":nth-child(3) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
     SUITABLE_FOR_DESABLE_BOX:"//textarea[@id='suitableForPeopleWithReducedMobilityComment']",
     LIVE_IN_STAFF_BTN:":nth-child(2) > :nth-child(2) > :nth-child(1) > :nth-child(1) > [data-testid=checkbox-toggle-input-container] > .checkbox-toggle > .checkbox-toggle__slider",
     LIVE_IN_STAFF_BOX:"//textarea[@id='liveInStaffComment']",
     SUITABLE_FOR_DESABLE_COMMENT:":nth-child(4) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-textedit]",
-    LIVE_IN_STAFF_COMMENT:"#furtherInformationAccordion > [data-testid=lc-accordion-body] > .lc-accordion-body-wrapper > [data-testid=baseForm] > :nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-textedit]"
+    LIVE_IN_STAFF_COMMENT:"#furtherInformationAccordion > [data-testid=lc-accordion-body] > .lc-accordion-body-wrapper > [data-testid=baseForm] > :nth-child(1) > :nth-child(2) > :nth-child(2) > :nth-child(2) > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-textedit]",
+    EVENTS_EDIT_BTN:"//div[@id='eventsAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
+    SUITABLE_FOR_EVENTS_BTN:"//span[@class='checkbox-toggle__slider']",
+    MAX_NUMBER_OF_PEOPLE_BOX:"//div[@data-testid='base-input-container']",
+    ALL_TYPE_OF_EVENT:"//label[@class='base-checkbox-label']//input[@value='all']",
+    MAX_NUMBER_OF_PEOPLE_READ_MODE:".w-full > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-value]",
+    
+    INCLUDED_SERVICES_EDIT_BTN:"//div[@id='includedServicesAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
+    CAR_WITH_DRIVER_SERVICES:"//label[@class='base-checkbox-label']//input[@value='car_with_driver']",
+    GUARDIEN_STAFF:"//label[@class='base-checkbox-label']//input[@value='guardian']",
+    STAFF_AT_HOME:"//label[@class='base-checkbox-label']//input[@value='staff_at_home']",
+    SPORTS_COACH:"//label[@class='base-checkbox-label']//input[@value='sports_coach']",
+    DINNER_PREPARATION:"//label[@class='base-checkbox-label']//input[@value='dinner_preparation']",
+    BREAKFAST_PREPARATION:"//label[@class='base-checkbox-label']//input[@value='breakfast_preparation']",
+    MASSAGE_SERVICE:"//label[@class='base-checkbox-label']//input[@value='massage']",
+    LAUNDRY_SERVICES:"//label[@class='base-checkbox-label']//input[@value='laundry_service']",
+    NESPRESSO_CAPSULES:"//label[@class='base-checkbox-label']//input[@value='nespresso_capsules']"
+
 }
 const RessourcesPageConst={
     SELECT_FILE_BTN:"//DIV[@class='fsp-select-labels']",
@@ -94,6 +105,7 @@ const PiecesAndEquipementPageConst={
     NEW_GROUP_SECTION:"//div[@id='areasGroup2Accordion']",
     EDIT_GROUP_BTN:"//button[@data-testid='areas-group-edit-button']",
     DELETE_GROUP_BTN:"//button[@data-testid='areas-group-delete-button']",
-    CONFIRMATION_DELETE_GROUP_BTN:"//button[@data-testid='areas-group-delete-confirm-button']"
+    CONFIRMATION_DELETE_GROUP_BTN:"//button[@data-testid='areas-group-delete-confirm-button']",
+    SAVE_MODIFICATION_BTN:"//button[@class='lc-btn--secondary lc-btn--md lc-btn lc-btn--font-bold ml-2']"
 }
 export{HousePageConsts,ConnexionPageConsts,FinancePageConsts,SalesPageConsts,SalesOpenPageConsts,InfoPageConst,RessourcesPageConst,PiecesAndEquipementPageConst}

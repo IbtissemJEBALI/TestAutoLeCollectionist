@@ -9,7 +9,6 @@ const ConnexionPageConsts={
     EMAIL_FIELD:"#identifierId",
     NEXT_BTN:".form__submit",
     PASSWORD_FIELD:"#password_login",
-    //input[@id='identifierId']
     CONNEXION_BTN:".form__submit"
     
 }

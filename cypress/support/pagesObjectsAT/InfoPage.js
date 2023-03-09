@@ -95,5 +95,27 @@ class InfoPage{
         isTextVisible(InfoPageConst.SUITABLE_FOR_DESABLE_COMMENT,commentaire1)
         isTextVisible(InfoPageConst.LIVE_IN_STAFF_COMMENT,commentaire2)
     }
+    static ClickOnEditEventSection(){
+        getPath(InfoPageConst.EVENTS_EDIT_BTN).click()
+    }
+    static ClickOnSuitableForEventBTN(){
+        getPath(InfoPageConst.SUITABLE_FOR_EVENTS_BTN).click()
+    }
+    static AddMaxNumberOfPeople(max_number){
+        getPath(InfoPageConst.MAX_NUMBER_OF_PEOPLE_BOX).clear()
+        getPath(InfoPageConst.MAX_NUMBER_OF_PEOPLE_BOX).type(max_number)
+    }
+    static ClickOnTypeOfEvent(){
+        getPath(InfoPageConst.ALL_TYPE_OF_EVENT).click
+    }
+    static isMaxNumberOfPeopleVisible(max_number){
+        isTextVisible(InfoPageConst.MAX_NUMBER_OF_PEOPLE_READ_MODE,max_number)
+    }
+    static ClickOnEditIncludedService(){
+        getPath(InfoPageConst.INCLUDED_SERVICES_EDIT_BTN).click()
+    }
+    static ClickOnShiftsType(){
+
+    }
 }
 export default InfoPage;

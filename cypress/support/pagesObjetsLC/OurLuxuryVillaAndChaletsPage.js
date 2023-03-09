@@ -67,10 +67,6 @@ class OurLuxuryVillaAndChaletsPage {
     }
     static GetResults () {
         getPath(OurLuxuryVillaAndChaletsPageConst.FIELD_RESULT).invoke('text').should('contain', 'résultats')
-       /* getPath(OurLuxuryVillaAndChaletsPageConst.FIELD_RESULT).then(($result) => {
-            const text = $result.text()
-            cy.debug(text)
-        })*/
     }
     static isVillaDisplayed(){
         getPath(OurLuxuryVillaAndChaletsPageConst.VILLA_LIST).should('be.visible')

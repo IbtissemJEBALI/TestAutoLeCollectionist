@@ -64,6 +64,9 @@ When ('Je clique sur édite',()=>{
 When ('Je clique sur le champ équipement',()=>{
     PiecesAndEquipementPage.ClickOnAddEquipementField()
 })
+And ('Je clique sur enregistrer les modifications',()=>{
+    PiecesAndEquipementPage.ClickOnSaveModificationBTN()
+    })
 And ('Je clique sur enregistrer',()=>{
     PiecesAndEquipementPage.ClickOnSaveBTN()
 })

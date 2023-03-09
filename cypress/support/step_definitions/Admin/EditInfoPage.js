@@ -39,7 +39,7 @@ And ('Je renseigne le nombre de salles de bains est {string}',(bathrooms)=>{
 And ('Je renseigne la surface est {string} mètre',(surface)=>{
   InfoPage.AddSurfaceNumber(surface)
 }) 
-Then ('Je dois vérifier que le nombre de chambres {string}, le nombre de salles de bains {string} et la surface est {string} mètre renseigner précédemment s\'affiche dans la section informations maison',(bedrooms,bathrooms,surface)=>{
+Then ('Je dois vérifier que le nombre de chambres {string}, le nombre de salles de bains {string} et la surface est {string} mètre renseigner précédemment s\'affichent dans la section informations maison',(bedrooms,bathrooms,surface)=>{
   InfoPage.isBedroomsNumberVisible(bedrooms)
   InfoPage.isBathroomsNumberVisible(bathrooms)
   //InfoPage.isSurfaceSizeVisible(surface)
@@ -61,6 +61,49 @@ And ('Je clique sur autre',()=>{
 And ('J\'ajout un commentaire {string}',(commentaire2)=>{
     InfoPage.AddLiveStaffComment(commentaire2)
 }) 
-Then ('Je dois vérifier que les commentaires {string} et {string} s\'affiche dans la section mise en avant',(commentaire1,commentaire2)=>{
+Then ('Je dois vérifier que les commentaires {string} et {string} s\'affichent dans la section mise en avant',(commentaire1,commentaire2)=>{
     InfoPage.isCommentVisible(commentaire1,commentaire2)
 }) 
+
+//SC4 : Section 4 : Évènements
+When ('Je clique sur editer dans la section Évènements',()=>{
+   InfoPage.ClickOnEditEventSection() 
+}) 
+When ('Je clique sur adapté aux événements',()=>{
+    InfoPage.ClickOnSuitableForEventBTN()
+}) 
+And ('J\'ajoute {string} le nombre maximal de personnes autorisées sur le lieu',(max_number)=>{
+    InfoPage.AddMaxNumberOfPeople(max_number)
+}) 
+And ('Je coche le type d\'évènements',()=>{
+    InfoPage.ClickOnTypeOfEvent()
+}) 
+Then ('Je dois vérifier que {string} le nombre maximal de personnes s\'affiche dans la section Évènements',(max_number)=>{
+    InfoPage.isMaxNumberOfPeopleVisible(max_number)
+}) 
+
+//SC5: Section 5 : Services inclus
+When ('Je clique sur editer dans la section Services inclus',()=>{
+    
+}) 
+When ('J\'ajoute les types de transfert',()=>{
+    
+}) 
+And ('J\'ajoute les types de personels',()=>{
+    
+}) 
+And ('J\'ajoute les types de repas ',()=>{
+    
+}) 
+And ('J\'ajoute les types de boissons',()=>{
+    
+}) 
+And ('J\'ajoute les types de services à l\'arrivée',()=>{
+    
+}) 
+And ('J\'ajoute les types de services au quotidien',()=>{
+    
+}) 
+And ('J\'ajoute les libres accées',()=>{
+    
+})  

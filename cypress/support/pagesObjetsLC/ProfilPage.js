@@ -1,5 +1,5 @@
 import { ProfilPageConsts } from "./utilsLC/ConstantsLC";
-import { getPath,isElementVisible,isTextVisible} from "../functions/CommunFonctions";
+import {isElementVisible,isTextVisible} from "../functions/CommunFonctions";
 class ProfilPage{
 
     static isEmailAccountDisplayed(email){

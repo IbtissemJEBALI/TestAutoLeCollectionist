@@ -54,7 +54,7 @@ Open VS Code terminal and run this commands  :
     - npm install multiple-cucumber-html-reporter --save-dev
     - npm install cypress-multi-reporters --save-dev : Handle multiple reporter
 
-# Step6 : How to run tests ?
+# Step6 : How to run tests locally 
 
 Opening cypress without configuration : 
 
@@ -68,6 +68,8 @@ Opening cypress with configuration :
     - Prod LC : npx cypress open --config-file Cypress/ConfigsFiles/Users/lc-prod.json
     - Prod AT : npx cypress open --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
 
+# Step7 : How to run tests in headless mode
+
 Launching Cypress without opening it :
 
     - Staging LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-staging.json
@@ -76,9 +78,16 @@ Launching Cypress without opening it :
     - Prod LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-prod.json
     - Prod AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
 
+# Step8 : How to run GitHub actions workflows
+
+    - npx cypress run --browser ${{ inputs.Browsers }} --config-file cypress/ConfigsFiles/${{ inputs.Plateforme }}/${{ inputs.ConfigFiles }}
+
+# Step9 : How to run tests with record 
+
+    - npx cypress run --browser ${{ inputs.Browsers }} --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file cypress/ConfigsFiles/${{ inputs.Plateforme }}/${{ inputs.ConfigFiles }}
 
 
-# Step7 : How generate report : Cucumber Report 
+# Step10 : How generate report : Cucumber Report 
 
 Run this command using the terminal under the project workspace : 
 

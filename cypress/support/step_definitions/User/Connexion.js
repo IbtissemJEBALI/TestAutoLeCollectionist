@@ -13,8 +13,6 @@ Given ('Je suis sur la page d\'accueil du site Le Collectionsit',()=>{
 } )
 When ('Je clique sur le bouton profil présent sur la barre de navigation' ,()=>{
     HomePage.ClickOnProfilBTN()
-   // HomePage.ClickOnMenuBTN()
-    //HomePage.ClickOnMyAccountBTN()
 } )
 Then ('Je dois vérifier que je suis rederigé vers la page intitulée {string}',(title)=>{
     ConnexionPage.isConnexionURLDisplayed(title)

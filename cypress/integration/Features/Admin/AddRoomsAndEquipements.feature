@@ -30,6 +30,7 @@ Then Je dois vérifier que la pièce "Bureau" ainsi la "Table de Bureau" s'affic
 When Je clique sur édite 
 Then Je dois vérifier que je suis rederigé vers la page intitulée "area"
 When Je clique sur le champ équipement 
+And Je clique sur enregistrer les modifications
 Then Je dois vérifier que je suis redirigé vers la page intitulée "equipments" 
 When Je clique ajouter un èquipement 
 Then Je dois vérifier qu'un champ équipements est affiché 
@@ -53,6 +54,7 @@ Then Je dois vérifier que l'espace "Cuisine professionnelle" ainsi le "Barbecue
 When Je clique sur édite 
 Then Je dois vérifier que je suis rederigé vers la page intitulée "area"
 When Je clique sur le champ équipement 
+And Je clique sur enregistrer les modifications
 Then Je dois vérifier que je suis redirigé vers la page intitulée "equipments" 
 When J'ajouter le nombre de l'équipement 
 And Je clique sur enregistrer

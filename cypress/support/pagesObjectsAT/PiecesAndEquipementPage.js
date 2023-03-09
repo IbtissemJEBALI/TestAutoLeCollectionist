@@ -60,6 +60,10 @@ class PiecesAndEquipementPage{
     static ClickOnAddEquipementField(){
         getPath(PiecesAndEquipementPageConst.EQUIPEMENT_FIELD).click()
     }
+    static ClickOnSaveModificationBTN(){
+        getPath(PiecesAndEquipementPageConst.SAVE_MODIFICATION_BTN).click()
+
+    }
 
     static ClickOnDeletePiece(){
         getPath(PiecesAndEquipementPageConst.DELETE_PIECE).click()
