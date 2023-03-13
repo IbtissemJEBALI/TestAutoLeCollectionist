@@ -2,6 +2,7 @@ Feature: Vérifier l'ajout des pièces et des équipements dans une maison
 
 En tant que gestionnaire, je dois pouvoir ajouter une pièce et lui associer des équipements.
 En tant que gestionnaire, je dois pourvoir ajouter un espace exterieur et lui associer des équipements
+En tant que gestionnaire, je dois pouvoir créer un nouveau groupe et lui associer des équipements 
 
 Background:
 Given Je suis sur la page de connexion de l’admin Tool

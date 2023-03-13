@@ -2,6 +2,12 @@ Feature: Éditer les sections de la page infos d'une maison depuis l'Admin Tool
 Description   Éditer les sections de la page infos d'une maison depuis l'Admin Tool
 
 
+En tant que gestionnaire, je dois pouvoir ajouter un score à une maison
+En tant que gestionnaire, je dois pouvoir ajouter le nombre de chambres et de salles de bains ainsi que la surface d'une maison
+En tant que gestionnaire, je dois pouvoir ajouter les informations complémentaires d'une maison
+En tant que gestionnaire, je dois pouvoir ajouter un événement à une maison
+En tant que gestionnaire, je dois pouvoir ajouter les services inclus d'une maison
+
 Background:
 Given Je suis sur la page de connexion de l’admin Tool
 When Je renseigne les identifiants de connexion

@@ -1,6 +1,7 @@
 Feature: Connexion au site Le Collectionist 
 Se connecter sur le site Le Collectionist 
 
+
 Scenario Outline: Se connecter sur le site Le Collectionsit avec des identifiants valides 
 Given Je suis sur la page d'accueil du site Le Collectionsit
 When Je clique sur le bouton profil présent sur la barre de navigation 

@@ -1,6 +1,7 @@
 Feature: Recherche une villa  
 Faire une recherche et une demande de renseignements d'une maison 
 
+
 Scenario Outline: Faire une recherche et une demande de renseignements d'une maison
 Given Je suis sur la page d'acceuil
 When Je cherche une villa "<villa>"
