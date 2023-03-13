@@ -48,14 +48,16 @@ And J'ajoute "20" le nombre maximal de personnes autorisées sur le lieu
 And Je coche le type d'évènements
 And Je clique sur enregistrer
 Then Je dois vérifier que "20" le nombre maximal de personnes s'affiche dans la section Évènements
+When Je clique sur editer dans la section Évènements
+And J'annule les modifications
+And Je clique sur enregistrer
 
 Scenario: Section 5 : Services inclus
 When Je clique sur editer dans la section Services inclus
-Then Je dois vérifier que la section s'affiche en vue éditable
+Then Je dois vérifier que la section services inclus s'affiche en vue éditable
 When J'ajoute les types de transfert
 And J'ajoute les types de personels
 And J'ajoute les types de repas 
-And J'ajoute les types de boissons
 And J'ajoute les types de services à l'arrivée
 And J'ajoute les types de services au quotidien
 And J'ajoute les libres accées 

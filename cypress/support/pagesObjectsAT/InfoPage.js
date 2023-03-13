@@ -1,4 +1,4 @@
-import { getPath, checkURL, isElementVisible, isTextVisible} from "../functions/CommunFonctions";
+import { getPath, checkURL, isElementVisible, isTextVisible,scrollToElement} from "../functions/CommunFonctions";
 import { InfoPageConst } from "./utilsAT/ConstantsAT";
 
 class InfoPage{
@@ -16,7 +16,7 @@ class InfoPage{
     static ClickOnPromoteEditBTN(){
         getPath(InfoPageConst.PROMOTE_EDIT_BTN).click()
     }
-    static isPromoteSectionEditable(){
+    static isSectionEditable(){
         isElementVisible(InfoPageConst.SAVE_BTN)
     }
     static ClickOnExclusivityBTN(){
@@ -111,11 +111,39 @@ class InfoPage{
     static isMaxNumberOfPeopleVisible(max_number){
         isTextVisible(InfoPageConst.MAX_NUMBER_OF_PEOPLE_READ_MODE,max_number)
     }
+    static IngnorModification(){
+        getPath(InfoPageConst.MAX_NUMBER_OF_PEOPLE_BOX).clear()
+        getPath(InfoPageConst.SUITABLE_FOR_EVENTS_BTN).click()
+    }
     static ClickOnEditIncludedService(){
         getPath(InfoPageConst.INCLUDED_SERVICES_EDIT_BTN).click()
     }
-    static ClickOnShiftsType(){
-
+    static isIncludedServicesSectionEditable(){
+        scrollToElement(InfoPageConst.INCLUDED_SERVICES_FILED)
+        isElementVisible(InfoPageConst.SAVE_BTN)
+    }
+    static AddShiftsType(){
+        getPath(InfoPageConst.CAR_WITH_DRIVER_SERVICES).click()
+    }
+    static AddStaffServices(){
+        getPath(InfoPageConst.GUARDIEN_STAFF).click()
+        getPath(InfoPageConst.STAFF_AT_HOME).click()
+        getPath(InfoPageConst.SPORTS_COACH).click()
+    }
+    static AddMealServices(){
+        getPath(InfoPageConst.DINNER_PREPARATION).click()
+        getPath(InfoPageConst.BREAKFAST_PREPARATION).click()
+    }
+    static AddWelcomingPack() {
+        getPath(InfoPageConst.MASSAGE_SERVICE).click()
+    }
+    static AddDailyServices(){
+        getPath(InfoPageConst.LAUNDRY_SERVICES).click()
+        getPath(InfoPageConst.NESPRESSO_CAPSULES).click()
+    }
+    static AddFreeAccessServices(){
+        getPath(InfoPageConst.ACCESS_TO_A_GOLF).click()
+        getPath(InfoPageConst.ACCESS_TO_SHARED_TENNIS_COURT).click()
     }
 }
 export default InfoPage;

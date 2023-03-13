@@ -5,7 +5,7 @@ When ('Je clique sur editer dans la section mise en avant',()=>{
     InfoPage.ClickOnPromoteEditBTN()
 })  
 Then ('Je dois vérifier que la section s\'affiche en vue éditable',()=>{
-    InfoPage.isPromoteSectionEditable()
+    InfoPage.isSectionEditable()
 }) 
 When ('Je clique sur exclusivité',()=>{
    InfoPage.ClickOnExclusivityBTN()
@@ -67,7 +67,7 @@ Then ('Je dois vérifier que les commentaires {string} et {string} s\'affichent 
 
 //SC4 : Section 4 : Évènements
 When ('Je clique sur editer dans la section Évènements',()=>{
-   InfoPage.ClickOnEditEventSection() 
+    InfoPage.ClickOnEditEventSection() 
 }) 
 When ('Je clique sur adapté aux événements',()=>{
     InfoPage.ClickOnSuitableForEventBTN()
@@ -81,29 +81,34 @@ And ('Je coche le type d\'évènements',()=>{
 Then ('Je dois vérifier que {string} le nombre maximal de personnes s\'affiche dans la section Évènements',(max_number)=>{
     InfoPage.isMaxNumberOfPeopleVisible(max_number)
 }) 
+And ('J\'annule les modifications',()=>{
+    InfoPage.IngnorModification()
+
+}) 
 
 //SC5: Section 5 : Services inclus
 When ('Je clique sur editer dans la section Services inclus',()=>{
-    
+    InfoPage.ClickOnEditIncludedService()
+})
+Then ('Je dois vérifier que la section services inclus s\'affiche en vue éditable',()=>{
+    InfoPage.isIncludedServicesSectionEditable()
 }) 
 When ('J\'ajoute les types de transfert',()=>{
-    
+    InfoPage.AddShiftsType()
 }) 
 And ('J\'ajoute les types de personels',()=>{
-    
+    InfoPage.AddStaffServices()
 }) 
-And ('J\'ajoute les types de repas ',()=>{
-    
-}) 
-And ('J\'ajoute les types de boissons',()=>{
-    
+And ('J\'ajoute les types de repas',()=>{
+    InfoPage.AddMealServices()
 }) 
 And ('J\'ajoute les types de services à l\'arrivée',()=>{
-    
+    InfoPage.AddWelcomingPack
 }) 
 And ('J\'ajoute les types de services au quotidien',()=>{
-    
+    InfoPage.AddDailyServices()
 }) 
 And ('J\'ajoute les libres accées',()=>{
+    InfoPage.AddFreeAccessServices()
     
 })  

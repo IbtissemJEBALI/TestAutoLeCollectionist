@@ -17,7 +17,10 @@ function getPath(path) {
  }
  function isTextContain(element,txt){
    getPath(element).should("contain",txt);
+ }
+ function scrollToElement(element){
+   getPath(element).scrollIntoView()
 }
 
 
-export  {getPath,checkURL,isElementVisible,isTextVisible,isTextContain}
+export  {getPath,checkURL,isElementVisible,isTextVisible,isTextContain,scrollToElement}

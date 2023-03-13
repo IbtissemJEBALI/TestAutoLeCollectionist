@@ -13,7 +13,7 @@ This projet allow to test the leCollectionist platform web
 ### Configuration and prerequisites ###
 
  # Cypress #
-### How to use project ###
+### How to use project localey ###
 
 # Step1
 
@@ -78,16 +78,26 @@ Launching Cypress without opening it :
     - Prod LC : npx cypress run --config-file Cypress/ConfigsFiles/Users/lc-prod.json
     - Prod AT : npx cypress run --config-file Cypress/ConfigsFiles/Admin/admintool-prod.json
 
-# Step8 : How to run GitHub actions workflows
-
-    - npx cypress run --browser ${{ inputs.Browsers }} --config-file cypress/ConfigsFiles/${{ inputs.Plateforme }}/${{ inputs.ConfigFiles }}
-
-# Step9 : How to run tests with record 
+# Step8 : How to run tests with record 
 
     - npx cypress run --browser ${{ inputs.Browsers }} --record --key 2139fbe1-f1a3-4e23-b538-6cee30937272 --config-file cypress/ConfigsFiles/${{ inputs.Plateforme }}/${{ inputs.ConfigFiles }}
 
+### How to use GitHub actions workflows ###
 
-# Step10 : How generate report : Cucumber Report 
+# Step1 : 
+
+- Click on Actions >> .github/workflows/main.yml
+
+<img width="1495" alt="Capture d’écran 2023-03-10 à 10 20 46" src="https://user-images.githubusercontent.com/125995511/224276527-2eb682b4-a430-43e2-b9f1-6a63fa6667f7.png">
+
+# Step2 : 
+
+- Click on Run workflow 
+
+<img width="409" alt="Capture d’écran 2023-03-10 à 10 22 32" src="https://user-images.githubusercontent.com/125995511/224277112-97c00faf-4cf8-4ac4-8ba6-a60570de081d.png">
+
+
+### How generate report : Cucumber Report ###
 
 Run this command using the terminal under the project workspace : 
 

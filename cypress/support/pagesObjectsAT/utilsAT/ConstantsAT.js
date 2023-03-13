@@ -57,7 +57,7 @@ const InfoPageConst={
     MAX_NUMBER_OF_PEOPLE_BOX:"//div[@data-testid='base-input-container']",
     ALL_TYPE_OF_EVENT:"//label[@class='base-checkbox-label']//input[@value='all']",
     MAX_NUMBER_OF_PEOPLE_READ_MODE:".w-full > [data-testid=base-field-read-mode] > [data-testid=base-field-read-mode-value]",
-    
+    INCLUDED_SERVICES_FILED:"#includedServices",
     INCLUDED_SERVICES_EDIT_BTN:"//div[@id='includedServicesAccordion']//button[@class='lc-icon--primary lc-icon--xs lc-icon lc-icon--font-bold']",
     CAR_WITH_DRIVER_SERVICES:"//label[@class='base-checkbox-label']//input[@value='car_with_driver']",
     GUARDIEN_STAFF:"//label[@class='base-checkbox-label']//input[@value='guardian']",
@@ -67,7 +67,9 @@ const InfoPageConst={
     BREAKFAST_PREPARATION:"//label[@class='base-checkbox-label']//input[@value='breakfast_preparation']",
     MASSAGE_SERVICE:"//label[@class='base-checkbox-label']//input[@value='massage']",
     LAUNDRY_SERVICES:"//label[@class='base-checkbox-label']//input[@value='laundry_service']",
-    NESPRESSO_CAPSULES:"//label[@class='base-checkbox-label']//input[@value='nespresso_capsules']"
+    NESPRESSO_CAPSULES:"//label[@class='base-checkbox-label']//input[@value='nespresso_capsules']",
+    ACCESS_TO_A_GOLF:"//label[@class='base-checkbox-label']//input[@value='free_access_to_a_golf_course']",
+    ACCESS_TO_SHARED_TENNIS_COURT:"//label[@class='base-checkbox-label']//input[@value='free_access_to_a_shared_tennis_court']"
 
 }
 const RessourcesPageConst={
